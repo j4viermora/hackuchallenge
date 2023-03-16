@@ -5,13 +5,313 @@
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/flickity@2/dist/flickity.min.css"
+    />
+    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+    <link rel="stylesheet" href="./styles.css" />
     <title>HackU challenge</title>
   </head>
-  <body>
-    <main>
-      <h2>
-      
-      </h2>
-    </main>
+  <body class="overflow-hidden bg-gradient-to-r from-blue-100 to-blue-50">
+    <div class="grid place-items-center">
+      <div
+        class="max-w-md h-screen w-full bg-neutral-800 shadow-3xl md:rounded-md flex flex-col overflow-y-auto overflow-x-hidden relative"
+      >
+        <!-- START SEARCH SECTION -->
+        <header>
+          <section class="flex items-center justify-evenly pt-10">
+            <svg
+              width="30"
+              height="28"
+              viewBox="0 0 30 28"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <mask
+                id="mask0_1_112"
+                style="mask-type: alpha"
+                maskUnits="userSpaceOnUse"
+                x="2"
+                y="12"
+                width="28"
+                height="16"
+              >
+                <path
+                  d="M2.73584 12.1677H30V28H2.73584V12.1677Z"
+                  fill="white"
+                />
+              </mask>
+              <g mask="url(#mask0_1_112)">
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M21.0776 23.1016C18.234 22.4292 16.0188 23.54 14.8667 26.277C14.3672 27.4636 13.5561 28.0439 12.2825 27.9816C10.8568 28.0427 8.77813 28.0567 8.52889 26.2319C8.032 22.3532 5.97329 19.2934 3.62296 16.3738C3.23281 15.9473 1.95741 14.428 3.42269 15.355C6.79218 18.0458 11.22 19.201 15.2681 17.3902C17.8922 16.2563 18.0333 14.737 18.5868 12.1677C23.2093 12.1665 26.7653 14.4503 28.544 18.8169C29.3087 21.2958 31.8567 27.7322 27.6037 27.9766C26.1417 28.0625 24.6012 27.9743 24.1043 26.3252C23.6434 25.0928 22.9587 24.0467 21.7732 23.411C21.5457 23.2604 21.2567 23.1628 21.0776 23.1016Z"
+                  fill="#949AA9"
+                />
+              </g>
+              <mask
+                id="mask1_1_112"
+                style="mask-type: alpha"
+                maskUnits="userSpaceOnUse"
+                x="0"
+                y="0"
+                width="19"
+                height="20"
+              >
+                <path d="M0 0H18.8965V19.1357H0V0Z" fill="white" />
+              </mask>
+              <g mask="url(#mask1_1_112)">
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M16.1626 8.1606C14.7853 6.73859 12.3223 6.52385 9.87659 6.68059C8.71631 6.75501 7.55684 6.73879 6.51449 6.50844C2.81561 5.40782 2.60694 1.01808 5.91307 1.35367C6.56426 1.41957 7.25883 2.25639 7.73073 3.35803C8.04613 4.09408 8.95856 3.94282 8.7401 3.17148C7.20246 -2.26413 1.61556 0.110087 0.49826 4.14822C-0.623437 7.45821 0.285594 12.5844 1.8652 14.4292L2.43165 15.1784C7.85545 23.2804 25.6423 17.9456 16.1626 8.1606Z"
+                  fill="#D8D8D8"
+                />
+              </g>
+            </svg>
+            <!-- component -->
+            <div class="w-80">
+              <div
+                class="relative flex items-center w-full h-10 rounded-3xl focus-within:shadow-lg bg-gray-200 overflow-hidden"
+              >
+                <div class="grid place-items-center h-full w-12 text-gray-400">
+                  <svg
+                    width="15"
+                    height="15"
+                    viewBox="0 0 15 15"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M13.8408 13.0767L10.7155 9.95143C11.4902 9.00694 11.9571 7.79714 11.9571 6.47857C11.9571 3.45408 9.50306 1 6.47857 1C3.45143 1 1 3.45408 1 6.47857C1 9.50306 3.45143 11.9571 6.47857 11.9571C7.79714 11.9571 9.00429 11.4929 9.94878 10.7182L13.0741 13.8408C13.2863 14.0531 13.6286 14.0531 13.8408 13.8408C14.0531 13.6312 14.0531 13.2863 13.8408 13.0767ZM6.47857 10.8667C4.05633 10.8667 2.08775 8.89816 2.08775 6.47857C2.08775 4.05898 4.05633 2.08776 6.47857 2.08776C8.89816 2.08776 10.8694 4.05898 10.8694 6.47857C10.8694 8.89816 8.89816 10.8667 6.47857 10.8667Z"
+                      stroke="black"
+                    />
+                  </svg>
+                </div>
+                <input
+                  class="peer h-full w-full outline-none text-xs text-gray-800 pr-2 bg-gray-200 placeholder-gray-700"
+                  type="text"
+                  placeholder="Search.."
+                />
+              </div>
+            </div>
+          </section>
+        </header>
+        <!-- END SEARCH SECTION -->
+        <main class="h-full">
+          <section class="mt-16 px-4">
+            <h2 class="text-gray-200 text-3xl font-bold w-4">Discover today</h2>
+            <p class="text-base text-gray-200 mt-5 w-56">
+              Proin sed est porta,imperdiet velit quis, faucibus sem. Nam
+              malesuada.
+            </p>
+          </section>
+          <!-- START SLIDE SECTION -->
+          <section
+            class="mt-10 gallery js-flickity px-3"
+            data-flickity-options='{ 
+              "prevNextButtons": false ,
+               "percentPosition": false ,
+               "cellAlign": "left",
+               "wrapAround": true
+            }'
+          >
+            <div class="gallery-cell mr-4">
+              <article
+                id="slide-1"
+                class="relative inline-block bg-violet-200 rounded-md h-80 w-56 px-2"
+              >
+                <div
+                  class="absolute bottom-2 right-2 left-2 bg-gray-700 rounded-md p-3"
+                >
+                  <h3 class="text-gray-200 text-sm font-bold">
+                    Short Story is a Piece of Prose Fiction
+                  </h3>
+                  <footer class="flex justify-between mt-2">
+                    <div>
+                      <h4 class="text-sm text-gray-200 font-semibold">
+                        Olivia
+                      </h4>
+                      <p class="text-xs text-gray-200 font-thin">7 min read</p>
+                    </div>
+                    <div>
+                      <span
+                        class="rounded-md px-2 py-1 bg-lime-100 font-bold"
+                        style="font-size: 0.5rem"
+                      >
+                        TRAVEL
+                      </span>
+                    </div>
+                  </footer>
+                </div>
+              </article>
+            </div>
+            <div class="gallery-cell mr-4">
+              <article
+                id="slide-2"
+                class="relative inline-block bg-violet-200 rounded-md h-80 w-56 px-2"
+              >
+                <div
+                  class="absolute bottom-2 right-2 left-2 bg-gray-700 rounded-md p-3"
+                >
+                  <h3 class="text-gray-200 text-sm font-bold">
+                    Evening city vie from pilot cock
+                  </h3>
+                  <footer class="flex justify-between mt-2">
+                    <div>
+                      <h4 class="text-sm text-gray-200 font-semibold">
+                        Charlotte
+                      </h4>
+                      <p class="text-xs text-gray-200 font-thin">7 min read</p>
+                    </div>
+                    <div>
+                      <span
+                        class="rounded-md px-2 py-1 bg-lime-100 font-bold"
+                        style="font-size: 0.5rem"
+                      >
+                        TRAVEL
+                      </span>
+                    </div>
+                  </footer>
+                </div>
+              </article>
+            </div>
+            <div class="gallery-cell mr-4">
+              <article
+                id="slide-2"
+                class="relative inline-block bg-violet-200 rounded-md h-80 w-56 px-2"
+              >
+                <div
+                  class="absolute bottom-2 right-2 left-2 bg-gray-700 rounded-md p-3"
+                >
+                  <h3 class="text-gray-200 text-sm font-bold">
+                    Evening city vie from pilot cock
+                  </h3>
+                  <footer class="flex justify-between mt-2">
+                    <div>
+                      <h4 class="text-sm text-gray-200 font-semibold">
+                        Charlotte
+                      </h4>
+                      <p class="text-xs text-gray-200 font-thin">7 min read</p>
+                    </div>
+                    <div>
+                      <span
+                        class="rounded-md px-2 py-1 bg-lime-100 font-bold"
+                        style="font-size: 0.5rem"
+                      >
+                        TRAVEL
+                      </span>
+                    </div>
+                  </footer>
+                </div>
+              </article>
+            </div>
+          </section>
+          <!-- END SLIDE SECTION -->
+        </main>
+        <!-- START TAB NAVBAR -->
+        <nav
+          class="h-20 w-full flex justify-evenly items-center pb-1 sticky bottom-0 bg-neutral-800 border-t border-neutral-600"
+        >
+          <a href="#" class="text-neutral-100 hover:text-blue-700">
+            <div class="flex flex-col items-center justify-center">
+              <svg
+                class="fill-neutral-50 hover:fill-blue-700"
+                width="20"
+                height="20"
+                viewBox="0 0 22 18"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M0.942 12C0.942 11.4477 1.38972 11 1.942 11C4.73409 11.0033 6.99669 13.2659 7 16.058C7 16.6103 6.55228 17.058 6 17.058C5.44772 17.058 5 16.6103 5 16.058C4.9978 14.37 3.62997 13.0022 1.942 13C1.38972 13 0.942 12.5523 0.942 12ZM0 16.5C0 17.3284 0.671573 18 1.5 18C2.32843 18 3 17.3284 3 16.5C3 15.6716 2.32843 15 1.5 15C0.671573 15 0 15.6716 0 16.5ZM2 7C1.44772 7 1 7.44772 1 8C1 8.55228 1.44772 9 2 9C5.86394 9.00496 8.99504 12.1361 9 16C9 16.5523 9.44772 17 10 17C10.5523 17 11 16.5523 11 16C10.9945 11.0317 6.96828 7.00551 2 7ZM21 0H1C0.447715 0 0 0.447715 0 1V3C0 3.55228 0.447715 4 1 4C1.55228 4 2 3.55228 2 3V2H20V16H15C14.4477 16 14 16.4477 14 17C14 17.5523 14.4477 18 15 18H21C21.5523 18 22 17.5523 22 17V1C22 0.447715 21.5523 0 21 0Z"
+                />
+              </svg>
+              <span class="text-xs mt-2"> Home </span>
+            </div>
+          </a>
+          <a href="#" class="text-neutral-100 hover:text-blue-700">
+            <div class="flex flex-col items-center justify-center">
+              <svg
+                class="fill-neutral-50 hover:fill-blue-700"
+                width="20"
+                height="20"
+                viewBox="0 0 18 18"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M16.3418 11.6836L4.81399 17.4473C3.88401 17.912 2.77974 17.8622 1.89536 17.3157C1.01097 16.7692 0.472518 15.8038 0.472198 14.7642V3.23585C0.472198 2.19616 1.01079 1.23066 1.89523 0.6841C2.77967 0.13754 3.88403 0.0878371 4.81399 0.552738L16.3418 6.31642C17.3576 6.82519 17.9991 7.86391 17.9991 9.00001C17.9991 10.1361 17.3576 11.1748 16.3418 11.6836Z"
+                />
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M15.6638 8.0743L3.73399 2.10965C3.4133 1.94878 3.03214 1.96564 2.7269 2.15419C2.42166 2.34275 2.23597 2.67604 2.23627 3.03483V14.9652C2.23627 15.3239 2.42193 15.657 2.72709 15.8455C3.03225 16.034 3.41328 16.051 3.73399 15.8904L15.6638 9.92571C16.0148 9.75071 16.2367 9.39223 16.2367 9.00001C16.2367 8.60778 16.0148 8.2493 15.6638 8.0743Z"
+                  fill="#242526"
+                />
+              </svg>
+
+              <span class="text-xs mt-2"> Videos </span>
+            </div>
+          </a>
+          <a href="#" class="text-neutral-100 hover:text-blue-700">
+            <div class="flex flex-col items-center justify-center">
+              <svg
+                class="fill-neutral-50 hover:fill-blue-700"
+                width="20"
+                height="20"
+                viewBox="0 0 20 20"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M20 19V1C20 0.447715 19.5523 0 19 0H1C0.447715 0 0 0.447715 0 1V19C0 19.5523 0.447715 20 1 20H19C19.5523 20 20 19.5523 20 19ZM9 18H2V11H9V18ZM18 18H11V11H18V18ZM18 9H2V2H18V9Z"
+                />
+              </svg>
+              <span class="text-xs mt-2"> Categories </span>
+            </div>
+          </a>
+          <a href="#" class="text-neutral-100 hover:text-blue-700">
+            <div class="flex flex-col items-center justify-center">
+              <svg
+                class="fill-neutral-50 hover:fill-blue-700"
+                width="20"
+                height="20"
+                viewBox="0 0 21 21"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M0.292756 19.7126C0.683256 20.103 1.31626 20.103 1.70676 19.7126L4.75776 16.6616C6.08365 17.316 7.5402 17.6627 9.01876 17.6756C11.5445 17.6408 13.9448 16.569 15.6568 14.7116C20.9998 9.36658 19.9358 1.30558 19.8878 0.968582C19.8256 0.526863 19.4785 0.179699 19.0368 0.117582C18.6998 0.0685817 10.6378 -0.994418 5.29376 4.34958C2.25075 7.1223 1.4508 11.5938 3.34376 15.2496L0.292756 18.2986C-0.097626 18.6891 -0.097626 19.3221 0.292756 19.7126ZM6.70776 5.76358C10.4408 2.03058 15.9438 1.92458 17.9718 2.03358C18.0778 4.06258 17.9718 9.56458 14.2428 13.2976C12.251 15.5577 9.04506 16.3058 6.25876 15.1606L10.6588 10.7606C10.9187 10.5095 11.023 10.1377 10.9315 9.78807C10.8399 9.43845 10.5669 9.1654 10.2173 9.07388C9.86763 8.98237 9.49583 9.08662 9.24476 9.34658L4.84476 13.7466C3.70005 10.9606 4.4481 7.75513 6.70776 5.76358Z"
+                />
+              </svg>
+
+              <span class="text-xs mt-2"> Authors </span>
+            </div>
+          </a>
+          <a href="#" class="text-neutral-100 hover:text-blue-700">
+            <div class="flex flex-col items-center justify-center">
+              <svg
+                class="fill-neutral-50 hover:fill-blue-700"
+                width="20"
+                height="20"
+                viewBox="0 0 20 18"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M0 1C0 0.447715 0.447715 0 1 0H19C19.5523 0 20 0.447715 20 1C20 1.55228 19.5523 2 19 2H1C0.447715 2 0 1.55228 0 1ZM1 10H19C19.5523 10 20 9.55228 20 9C20 8.44772 19.5523 8 19 8H1C0.447715 8 0 8.44772 0 9C0 9.55228 0.447715 10 1 10ZM19 16H10C9.44772 16 9 16.4477 9 17C9 17.5523 9.44772 18 10 18H19C19.5523 18 20 17.5523 20 17C20 16.4477 19.5523 16 19 16Z"
+                />
+              </svg>
+              <span class="text-xs mt-2"> Settings </span>
+            </div>
+          </a>
+        </nav>
+        <!-- END TAB NAVBAR -->
+      </div>
+    </div>
   </body>
 </html>
