@@ -13,14 +13,14 @@
     <link rel="stylesheet" href="./styles.css" />
     <title>HackU challenge</title>
   </head>
-  <body class="overflow-hidden bg-gradient-to-r from-blue-100 to-blue-50">
-    <div class="grid place-items-center">
-      <div
-        class="max-w-md h-screen w-full bg-neutral-800 shadow-3xl md:rounded-md flex flex-col overflow-y-auto overflow-x-hidden relative"
+  <body>
+    <div class="flex justify-center items-center h-full w-full">
+      <main
+        class="max-w-md w-full h-full bg-neutral-800 shadow-3xl md:rounded-md relative"
       >
         <!-- START SEARCH SECTION -->
         <header>
-          <section class="flex items-center justify-evenly pt-10">
+          <section class="flex items-center justify-evenly pt-10 pb-4">
             <svg
               width="30"
               height="28"
@@ -99,120 +99,117 @@
           </section>
         </header>
         <!-- END SEARCH SECTION -->
-        <main class="h-full">
-          <section class="mt-16 px-4">
-            <h2 class="text-gray-200 text-3xl font-bold w-4">Discover today</h2>
-            <p class="text-base text-gray-200 mt-5 w-56">
-              Proin sed est porta,imperdiet velit quis, faucibus sem. Nam
-              malesuada.
-            </p>
-          </section>
-          <!-- START SLIDE SECTION -->
-          <section
-            class="mt-10 gallery js-flickity px-3"
-            data-flickity-options='{ 
-              "prevNextButtons": false ,
-               "percentPosition": false ,
-               "cellAlign": "left",
-               "wrapAround": true
-            }'
-          >
-            <div class="gallery-cell mr-4">
-              <article
-                id="slide-1"
-                class="relative inline-block bg-violet-200 rounded-md h-80 w-56 px-2"
+        <section class="mt-10 px-4">
+          <h2 class="text-gray-200 text-3xl font-bold w-4">Discover today</h2>
+          <p class="text-base text-gray-200 mt-5 w-56">
+            Proin sed est porta,imperdiet velit quis, faucibus sem. Nam
+            malesuada.
+          </p>
+        </section>
+        <!-- START SLIDE SECTION -->
+        <section
+          class="mt-10 gallery js-flickity px-3 mb-16"
+          data-flickity-options='{ 
+            "prevNextButtons": false ,
+             "percentPosition": false ,
+             "cellAlign": "left",
+             "wrapAround": true
+          }'
+        >
+          <div class="gallery-cell mr-4">
+            <article
+              id="slide-1"
+              class="relative inline-block bg-violet-200 rounded-md h-80 w-56 px-2"
+            >
+              <div
+                class="absolute bottom-2 right-2 left-2 bg-gray-700 rounded-md p-3"
               >
-                <div
-                  class="absolute bottom-2 right-2 left-2 bg-gray-700 rounded-md p-3"
-                >
-                  <h3 class="text-gray-200 text-sm font-bold">
-                    Short Story is a Piece of Prose Fiction
-                  </h3>
-                  <footer class="flex justify-between mt-2">
-                    <div>
-                      <h4 class="text-sm text-gray-200 font-semibold">
-                        Olivia
-                      </h4>
-                      <p class="text-xs text-gray-200 font-thin">7 min read</p>
-                    </div>
-                    <div>
-                      <span
-                        class="rounded-md px-2 py-1 bg-lime-100 font-bold"
-                        style="font-size: 0.5rem"
-                      >
-                        TRAVEL
-                      </span>
-                    </div>
-                  </footer>
-                </div>
-              </article>
-            </div>
-            <div class="gallery-cell mr-4">
-              <article
-                id="slide-2"
-                class="relative inline-block bg-violet-200 rounded-md h-80 w-56 px-2"
+                <h3 class="text-gray-200 text-sm font-bold">
+                  Short Story is a Piece of Prose Fiction
+                </h3>
+                <footer class="flex justify-between mt-2">
+                  <div>
+                    <h4 class="text-sm text-gray-200 font-semibold">Olivia</h4>
+                    <p class="text-xs text-gray-200 font-thin">7 min read</p>
+                  </div>
+                  <div>
+                    <span
+                      class="rounded-md px-2 py-1 bg-lime-100 font-bold"
+                      style="font-size: 0.5rem"
+                    >
+                      TRAVEL
+                    </span>
+                  </div>
+                </footer>
+              </div>
+            </article>
+          </div>
+          <div class="gallery-cell mr-4">
+            <article
+              id="slide-2"
+              class="relative inline-block bg-violet-200 rounded-md h-80 w-56 px-2"
+            >
+              <div
+                class="absolute bottom-2 right-2 left-2 bg-gray-700 rounded-md p-3"
               >
-                <div
-                  class="absolute bottom-2 right-2 left-2 bg-gray-700 rounded-md p-3"
-                >
-                  <h3 class="text-gray-200 text-sm font-bold">
-                    Evening city vie from pilot cock
-                  </h3>
-                  <footer class="flex justify-between mt-2">
-                    <div>
-                      <h4 class="text-sm text-gray-200 font-semibold">
-                        Charlotte
-                      </h4>
-                      <p class="text-xs text-gray-200 font-thin">7 min read</p>
-                    </div>
-                    <div>
-                      <span
-                        class="rounded-md px-2 py-1 bg-lime-100 font-bold"
-                        style="font-size: 0.5rem"
-                      >
-                        TRAVEL
-                      </span>
-                    </div>
-                  </footer>
-                </div>
-              </article>
-            </div>
-            <div class="gallery-cell mr-4">
-              <article
-                id="slide-2"
-                class="relative inline-block bg-violet-200 rounded-md h-80 w-56 px-2"
+                <h3 class="text-gray-200 text-sm font-bold">
+                  Evening city vie from pilot cock
+                </h3>
+                <footer class="flex justify-between mt-2">
+                  <div>
+                    <h4 class="text-sm text-gray-200 font-semibold">
+                      Charlotte
+                    </h4>
+                    <p class="text-xs text-gray-200 font-thin">7 min read</p>
+                  </div>
+                  <div>
+                    <span
+                      class="rounded-md px-2 py-1 bg-lime-100 font-bold"
+                      style="font-size: 0.5rem"
+                    >
+                      TRAVEL
+                    </span>
+                  </div>
+                </footer>
+              </div>
+            </article>
+          </div>
+          <div class="gallery-cell mr-4">
+            <article
+              id="slide-2"
+              class="relative inline-block bg-violet-200 rounded-md h-80 w-56 px-2"
+            >
+              <div
+                class="absolute bottom-2 right-2 left-2 bg-gray-700 rounded-md p-3"
               >
-                <div
-                  class="absolute bottom-2 right-2 left-2 bg-gray-700 rounded-md p-3"
-                >
-                  <h3 class="text-gray-200 text-sm font-bold">
-                    Evening city vie from pilot cock
-                  </h3>
-                  <footer class="flex justify-between mt-2">
-                    <div>
-                      <h4 class="text-sm text-gray-200 font-semibold">
-                        Charlotte
-                      </h4>
-                      <p class="text-xs text-gray-200 font-thin">7 min read</p>
-                    </div>
-                    <div>
-                      <span
-                        class="rounded-md px-2 py-1 bg-lime-100 font-bold"
-                        style="font-size: 0.5rem"
-                      >
-                        TRAVEL
-                      </span>
-                    </div>
-                  </footer>
-                </div>
-              </article>
-            </div>
-          </section>
-          <!-- END SLIDE SECTION -->
-        </main>
+                <h3 class="text-gray-200 text-sm font-bold">
+                  Evening city vie from pilot cock
+                </h3>
+                <footer class="flex justify-between mt-2">
+                  <div>
+                    <h4 class="text-sm text-gray-200 font-semibold">
+                      Charlotte
+                    </h4>
+                    <p class="text-xs text-gray-200 font-thin">7 min read</p>
+                  </div>
+                  <div>
+                    <span
+                      class="rounded-md px-2 py-1 bg-lime-100 font-bold"
+                      style="font-size: 0.5rem"
+                    >
+                      TRAVEL
+                    </span>
+                  </div>
+                </footer>
+              </div>
+            </article>
+          </div>
+        </section>
+        <!-- END SLIDE SECTION -->
+
         <!-- START TAB NAVBAR -->
         <nav
-          class="h-20 w-full flex justify-evenly items-center pb-1 sticky bottom-0 bg-neutral-800 border-t border-neutral-600"
+          class="h-16 w-full flex sticky md:rounded-md justify-evenly items-center pt-1 bottom-0 bg-neutral-800 border-t border-neutral-600"
         >
           <a href="#" class="text-neutral-100 hover:text-blue-700">
             <div class="flex flex-col items-center justify-center">
@@ -311,7 +308,7 @@
           </a>
         </nav>
         <!-- END TAB NAVBAR -->
-      </div>
+      </main>
     </div>
   </body>
 </html>
